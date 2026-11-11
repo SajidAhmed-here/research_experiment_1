@@ -1,4 +1,4 @@
-name: Tools
+name: Sync labels
 
 on:
   push:
@@ -6,10 +6,10 @@ on:
       - main
     paths:
       - .github/labels.yml
-      - .github/workflows/sync-labels.yml
+      - .github/workflows/sync-labels.yaml
   workflow_dispatch:
   schedule:
-    - cron: 0 0 1 * * # First day of each month
+    - cron: '0 0 1 * *' # First day of each month at 00:00 UTC
 
 permissions:
   issues: write
